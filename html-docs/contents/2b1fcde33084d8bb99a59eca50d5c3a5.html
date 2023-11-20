@@ -53,7 +53,7 @@
           <span class="label label-info"><a href='391e4f44c7c0f5016a0100ba2e661ce4.html'><span class='node-icon staruml-icon icon-UMLInteraction'></span>cancelarPago</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='3fbb7fe9da38e6261ac6b3d99e7f2c42.html'><span class='node-icon staruml-icon icon-UMLCombinedFragment'></span>comprobar que el usuario es el que emitió el pago</a></span>
+          <span class="label label-info"><a href='3fbb7fe9da38e6261ac6b3d99e7f2c42.html'><span class='node-icon staruml-icon icon-UMLCombinedFragment'></span>comprobaciones que permitan cancelar el pago</a></span>
         
           <span>::</span>
           <span class="label label-info"><a href='2b1fcde33084d8bb99a59eca50d5c3a5.html'><span class='node-icon staruml-icon icon-UMLInteractionOperand'></span>Operand1</a></span>
@@ -283,7 +283,7 @@
     
     <tr>
         <td>guard</td>
-        <td>u != p.emisorPago</td>
+        <td>u != p.emisorPago || p.cancelado == true || p.evento.fecha &lt; today() || p.pagado == false</td>
     </tr>
     
     
